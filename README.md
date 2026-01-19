@@ -14,10 +14,10 @@
 
 ## Platform Support
 
-| Platform | Status |
-| -------- | ------ |
-| Windows  | Ready  |
-| Linux    | Ready  |
+| Platform | Status      |
+| -------- | ----------- |
+| Windows  | Need Tester |
+| Linux    | Need Tester |
 
 ## Requirements
 
