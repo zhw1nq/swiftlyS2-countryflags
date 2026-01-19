@@ -1,0 +1,10 @@
+{
+    "prefix": " [gold]CountryFlags [silver]» ",
+    "flag_enabled": "Flag display [green]enabled",
+    "flag_disabled": "Flag display [red]disabled",
+    "country_info": "Your country: [lime]{0}",
+    "command_disabled": "[red]This command is disabled by server",
+    "detecting": "[grey]Detecting your country...",
+    "not_found": "[grey]Country not detected",
+    "error": "[red]Error detecting country"
+}

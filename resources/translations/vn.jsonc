@@ -1,0 +1,10 @@
+{
+    "prefix": " [gold]CountryFlags [silver]» ",
+    "flag_enabled": "Hiển thị cờ [green]đã bật",
+    "flag_disabled": "Hiển thị cờ [red]đã tắt",
+    "country_info": "Quốc gia của bạn: [lime]{0}",
+    "command_disabled": "[red]Lệnh này đã bị server tắt",
+    "detecting": "[silver]Đang xác định quốc gia của bạn...",
+    "not_found": "[silver]Không xác định được quốc gia",
+    "error": "[red]Lỗi khi xác định quốc gia"
+}
