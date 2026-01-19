@@ -1,5 +1,4 @@
 using MaxMind.GeoIP2;
-using MaxMind.GeoIP2.Exceptions;
 using Microsoft.Extensions.Logging;
 using SwiftlyS2.Shared;
 
@@ -39,8 +38,10 @@ public sealed class GeoIpService : IDisposable
                 return false;
             }
 
-            _reader = new DatabaseReader(_databasePath);
-            _core.Logger.LogInformation("[CountryFlags] GeoIP database loaded");
+            // Use FileAccessMode.Memory instead of default MemoryMapped to avoid crashes
+            // This loads the entire database into memory, which is more stable
+            _reader = new DatabaseReader(_databasePath, MaxMind.Db.FileAccessMode.Memory);
+            _core.Logger.LogInformation("[CountryFlags] GeoIP database loaded successfully");
             return true;
         }
         catch (Exception ex)
@@ -61,21 +62,17 @@ public sealed class GeoIpService : IDisposable
             if (ip == null || IsPrivateIp(ip))
                 return null;
 
-            var response = _reader.Country(ip);
-            return response.Country.IsoCode;
-        }
-        catch (AddressNotFoundException)
-        {
-            return null;
-        }
-        catch (GeoIP2Exception ex)
-        {
-            LogDebug("[CountryFlags] GeoIP error: {Error}", ex.Message);
+            // Use TryCountry instead of Country to avoid exception overhead
+            if (_reader.TryCountry(ip, out var response) && response != null)
+            {
+                return response.Country.IsoCode;
+            }
+            
             return null;
         }
         catch (Exception ex)
         {
-            LogDebug("[CountryFlags] Error: {Error}", ex.Message);
+            LogDebug("[CountryFlags] Error getting country: {Error}", ex.Message);
             return null;
         }
     }
