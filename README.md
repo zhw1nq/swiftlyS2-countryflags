@@ -109,6 +109,7 @@ Output directory: `build/publish/swiftlyS2-countryflags/`
 ## Credits
 
 - [zhw1nq](https://github.com/zhw1nq) - Author
+- [Mvkweb](https://github.com/Mvkweb) - Author
 - [SwiftlyS2](https://github.com/swiftly-solution/swiftlys2) - Framework
 - [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) - GeoIP Database
 - [swiftly-solutions/countryflags](https://github.com/swiftly-solutions/countryflags) - Original SwiftlyS1 plugin
