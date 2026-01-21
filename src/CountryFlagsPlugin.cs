@@ -20,7 +20,7 @@ namespace swiftlyS2_countryflags;
     Id = "swiftlyS2_countryflags",
     Version = Constants.Version,
     Name = "SwiftlyS2 Country Flags",
-    Author = "zhw1nq",
+    Author = "zhw1nq, Mvkweb",
     Description = "Displays country flags on the scoreboard based on player's IP location. [For SwiftlyS2]"
 )]
 public sealed partial class CountryFlagsPlugin : BasePlugin
