@@ -16,8 +16,8 @@
 
 | Platform | Status      |
 | -------- | ----------- |
-| Windows  | Need Tester |
-| Linux    | Need Tester |
+| Windows  | Maintenance |
+| Linux    | Maintenance |
 
 ## Requirements
 
