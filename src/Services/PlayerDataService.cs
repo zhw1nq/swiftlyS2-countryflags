@@ -115,7 +115,15 @@ public sealed class PlayerDataService : IDisposable
         if (_hasDirtyData)
         {
             _hasDirtyData = false;
-            SaveAsync().GetAwaiter().GetResult();
+            try
+            {
+                // Use Task.Run to avoid potential deadlock with synchronization context
+                Task.Run(async () => await SaveAsync()).Wait(TimeSpan.FromSeconds(5));
+            }
+            catch (Exception)
+            {
+                // Ignore save errors during dispose - best effort
+            }
         }
         
         _fileLock.Dispose();

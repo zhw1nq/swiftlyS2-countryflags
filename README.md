@@ -27,10 +27,11 @@
 
 1. Download the [latest release](https://github.com/zhw1nq/swiftlyS2-countryflags/releases)
 2. Extract plugin to `addons/swiftlys2/plugins/swiftlyS2-countryflags/`
-3. Restart the server
-4. Configure `config.jsonc` (optional)
+3. Copy `GeoLite2-Country.mmdb` to `addons/swiftlys2/data/swiftlyS2_countryflags/`
+4. Restart the server
+5. Configure `config.jsonc` (optional)
 
-> **Note:** GeoLite2-Country.mmdb is already included in the `data/` folder.
+> **Important:** The GeoIP database must be placed in `addons/swiftlys2/data/swiftlyS2_countryflags/`, NOT in the plugin folder.
 
 ## Configuration
 
