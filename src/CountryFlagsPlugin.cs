@@ -45,18 +45,27 @@ public sealed partial class CountryFlagsPlugin : BasePlugin
 
     public override void Load(bool hotReload)
     {
-        LoadConfiguration();
-        
-        if (!_config.Enabled)
+        try
         {
-            Core.Logger.LogWarning("[CountryFlags] Plugin is disabled in config");
-            return;
+            LoadConfiguration();
+            
+            if (!_config.Enabled)
+            {
+                Core.Logger.LogWarning("[CountryFlags] Plugin is disabled in config");
+                return;
+            }
+            
+            InitializeServices();
+            RegisterEvents();
+            
+            Core.Logger.LogInformation("[CountryFlags] v{Version} loaded successfully", Constants.Version);
         }
-        
-        InitializeServices();
-        RegisterEvents();
-        
-        Core.Logger.LogInformation("[CountryFlags] v{Version} loaded successfully", Constants.Version);
+        catch (Exception ex)
+        {
+            Core.Logger.LogError("[CountryFlags] Failed to load plugin: {Error}", ex.Message);
+            Core.Logger.LogError("[CountryFlags] Stack trace: {Stack}", ex.StackTrace ?? "N/A");
+            // Don't re-throw - let the server continue without this plugin
+        }
     }
 
     public override void Unload()
