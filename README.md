@@ -12,12 +12,20 @@
 
 ---
 
+## Showcase
+
+<div align="center">
+  <img src="https://private-user-images.githubusercontent.com/53517019/538497672-7b44111c-04ac-4eee-a6bf-eb6c6f6e19f3.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjkwMDcwNDksIm5iZiI6MTc2OTAwNjc0OSwicGF0aCI6Ii81MzUxNzAxOS81Mzg0OTc2NzItN2I0NDExMWMtMDRhYy00ZWVlLWE2YmYtZWI2YzZmNmUxOWYzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTIxVDE0NDU0OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU0YTc2NmZjZDZlZmMyOTk5NGEzMGE4OTM1ZWVjMjRhNDkzYzE3YmYzMGQ0MTlmNWI2YzEwZmYwNTc3ZDY4OWMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.fDF3Rr9NA8fTwgDgEfLb8_T1w1Wlfzg1BEyUXHZHCxU" alt="Showcase"/>
+</div>
+
+---
+
 ## Platform Support
 
 | Platform | Status      |
 | -------- | ----------- |
 | Windows  | Maintenance |
-| Linux    | Maintenance |
+| Linux    | Ready |
 
 ## Requirements
 
